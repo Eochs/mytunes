@@ -10,6 +10,12 @@ var SongQueueView = Backbone.View.extend({
   render: function() {
     this.$el.html('<th>Song Queue</th>');
     this.$el.append(this.collection.map(function(song){ return new SongQueueEntryView({model: song}).render(); }))
+    return this.$el;
+  }
+
+
+});
+
 
   //   this.$el.append(new SongQueueEntryView({model: new SongModel({
   //   url: "https://s3-us-west-1.amazonaws.com/hr-mytunes/data/04+One+In+A+Million.mp3",
@@ -25,8 +31,3 @@ var SongQueueView = Backbone.View.extend({
     //     }
     //   );
     // );
-    return this.$el;
-  }
-
-
-});
