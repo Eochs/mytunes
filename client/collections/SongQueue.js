@@ -5,6 +5,10 @@ var SongQueue = Songs.extend({
     // this.on('enqueue', function(song){
     //   this.push(song);
     // });
+  },
+
+  playFirst : function(){
+    this.at(0).play();
   }
 
 
